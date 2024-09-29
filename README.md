@@ -1,2 +1,2 @@
 # windows-cat
-cat command on windows written in rust
+cat command on windows written in rust (blazingly fast)
