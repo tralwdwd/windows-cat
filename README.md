@@ -2,8 +2,8 @@
 cat command on windows written in rust (blazingly fast)
 
 
-# Build
+## Build
 Clone repo and run `cargo build --release` in the directory.
 
-# Use
+## Usage
 `cat [file]`
