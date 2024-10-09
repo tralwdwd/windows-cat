@@ -1,8 +1,19 @@
 use std::fs;
-use std::env;
+use clap::{Arg, Command};
 
 fn main(){
-    let file = env::args().nth(1).unwrap_or_else(|| {
+    let matches=Command::new("windows-cat")
+    .about("windows-cat: Unix cat command but for windows.")
+    .bin_name("cat")
+    .arg(
+        Arg::new("file")
+        .help("File to extract contents from.")
+        .required(false)
+        .index(1)
+    )
+    .get_matches();
+    let file = matches.get_one::<String>("file")
+    .unwrap_or_else(|| {
     eprint!("Error: No file specified");
     std::process::exit(1); 
     });
