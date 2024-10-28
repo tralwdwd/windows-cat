@@ -1,7 +1,10 @@
 [package]
 name = "cat"
-version = "0.1.0"
+version = "1.0.1"
 edition = "2021"
+description = "unix cat command for windows"
+readme = "README.md"
+repository = "https://github.com/tralwdwd/windows-cat"
 
 [dependencies]
 clap = "4.5.20"
