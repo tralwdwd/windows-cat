@@ -1,5 +1,5 @@
 [package]
-name = "cat"
+name = "windows-cat"
 version = "1.0.1"
 edition = "2021"
 description = "unix cat command for windows"
