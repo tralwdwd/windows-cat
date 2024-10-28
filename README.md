@@ -3,6 +3,8 @@
 
 cat command on windows written in rust (blazingly fast)
 
+## Install
+Download binary from release or, if you have rust, run `cargo install windows-cat`.
 
 ## Build
 Clone repo and run `cargo build --release` in the directory.
