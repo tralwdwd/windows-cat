@@ -5,6 +5,7 @@ edition = "2021"
 description = "unix cat command for windows"
 readme = "README.md"
 repository = "https://github.com/tralwdwd/windows-cat"
+license = "MIT"
 
 [dependencies]
 clap = "4.5.20"
