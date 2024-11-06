@@ -1,6 +1,6 @@
 [package]
 name = "windows-cat"
-version = "1.0.2"
+version = "1.0.3"
 edition = "2021"
 description = "unix cat command for windows"
 readme = "README.md"
@@ -8,7 +8,7 @@ repository = "https://github.com/tralwdwd/windows-cat"
 license = "MIT"
 
 [dependencies]
-clap = "4.5.20"
+clap = {version="4.5.20", default-features=false, features=["std"]}
 
 [[bin]]
 name = "cat"

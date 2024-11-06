@@ -1,4 +1,5 @@
 use std::fs;
+use std::path::PathBuf;
 use clap::{Arg, Command};
 
 fn main(){
@@ -12,11 +13,12 @@ fn main(){
         .index(1)
     )
     .get_matches();
-    let file = matches.get_one::<String>("file")
+    let file = PathBuf::from(matches.get_one::<String>("file")
     .unwrap_or_else(|| {
     eprint!("Error: No file specified");
     std::process::exit(1); 
-    });
+    }));
+    if !file.is_dir(){
     match fs::read_to_string(file) {
         Ok(contents) => {
             // Successfully read the file
@@ -28,4 +30,8 @@ fn main(){
             std::process::exit(1);
         }
     }
+}else{
+    eprint!("Error: Path is not a file");
+    std::process::exit(1);
+}
 }
